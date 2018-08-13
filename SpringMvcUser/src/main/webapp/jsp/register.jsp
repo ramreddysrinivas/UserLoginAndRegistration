@@ -4,40 +4,58 @@
 	pageEncoding="ISO-8859-1"%>
 <html>
 <head>
+<style>
+body {
+	background-color: lightblue;
+}
+</style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Registration</title>
+   
+ <script  src="/js/" type="text/javascript"></script>
+   
 </head>
 <body>
-	<form:form id="regForm" modelAttribute="user" action="registerProcess"
-		method="post">
+	<h2 style="color: Violet;">Registration Details</h2>
 
-		<table align="center">
+	<form:form id="regForm" modelAttribute="user" action="registerProcess"
+		method="POST" onSubmit="function validate()">
+
+		<table>
+
 			<tr>
-				<td><form:label path="username">Username</form:label></td>
-				<td><form:input path="username" name="username" id="username" /></td>
+				<td><form:label path="username">User Name</form:label> <span
+					style="color: red">*</span></td>
+				<td><form:input path="username"  plaseholder = "Enter User Name" name="username" id="username" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="password">Password</form:label></td>
-				<td><form:password path="password" name="password" id="password" /></td>
+				<td><form:label path="password">Password</form:label> <span
+					style="color: red">*</span></td>
+				<td><form:password path="password" name="password"
+						id="password" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="firstname">FirstName</form:label></td>
-				<td><form:input path="firstname" name="firstname" id="firstname" /></td>
+				<td><form:label path="firstname">First Name</form:label> <span
+					style="color: red">*</span></td>
+				<td><form:input path="firstname" name="firstname"
+						id="firstname" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="lastname">LastName</form:label></td>
+				<td><form:label path="lastname">Last Name</form:label></td>
 				<td><form:input path="lastname" name="lastname" id="lastname" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="email">Email</form:label></td>
+				<td><form:label path="email">Email</form:label> <span
+					style="color: red">*</span></td>
 				<td><form:input path="email" name="email" id="email" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="address">Address</form:label></td>
+				<td><form:label path="address">Address</form:label> <span
+					style="color: red">*</span></td>
 				<td><form:input path="address" name="address" id="address" /></td>
 			</tr>
 			<tr>
-				<td><form:label path="phone">Phone</form:label></td>
+				<td><form:label path="phone">Phone</form:label> <span
+					style="color: red">*</span></td>
 				<td><form:input path="phone" name="phone" id="phone" /></td>
 			</tr>
 
@@ -46,12 +64,9 @@
 				<td><form:button id="register" name="register">Register</form:button></td>
 			</tr>
 			<tr></tr>
-			<tr>
-				<td></td>
-				<td><a href="login.jsp">Login</a></td>
-				
-			</tr>
+
 		</table>
+		<a href="home.jsp">home</a>
 	</form:form>
 </body>
 </html>

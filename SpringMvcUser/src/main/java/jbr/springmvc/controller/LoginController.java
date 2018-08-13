@@ -36,8 +36,9 @@ public class LoginController {
     User user = userService.validateUser(login);
 
     if (null != user) {
-      mav = new ModelAndView("welcome");
-      mav.addObject("firstname", user.getFirstname());
+      /*mav = new ModelAndView("welcome");
+      mav.addObject("firstname", user.getFirstname());*/
+    	 mav=new ModelAndView("userDetails", "user", user);
     } else {
       mav = new ModelAndView("login");
       mav.addObject("message", "Username or Password is wrong!!");

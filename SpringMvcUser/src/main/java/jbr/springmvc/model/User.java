@@ -8,14 +8,13 @@ public class User {
   private String lastname;
   private String email;
   private String address;
-  private int phone;
+  private long phone;
 
   public String getUsername() {
     return username;
   }
 
   public void setUsername(String username) {
-    System.out.println("username: " + username);
     this.username = username;
   }
 
@@ -32,7 +31,6 @@ public class User {
   }
 
   public void setFirstname(String firstname) {
-    System.out.println("firstname: " + firstname);
     this.firstname = firstname;
   }
 
@@ -41,7 +39,6 @@ public class User {
   }
 
   public void setLastname(String lastname) {
-    System.out.println("lastname: " + lastname);
     this.lastname = lastname;
   }
 
@@ -61,11 +58,11 @@ public class User {
     this.address = address;
   }
 
-  public int getPhone() {
+  public long getPhone() {
     return phone;
   }
 
-  public void setPhone(int phone) {
+  public void setPhone(long phone) {
     this.phone = phone;
   }
 }
