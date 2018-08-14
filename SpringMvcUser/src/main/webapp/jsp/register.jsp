@@ -11,21 +11,54 @@ body {
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
    
- <script  src="/js/" type="text/javascript"></script>
+ <script src="/resources/js/registrationvalidation.js" /></script> 
+ 
+  <%-- <script src="<form:url value="/resources/js/registrationvalidation.js" />"></script>  --%>
+
    
+  <!-- <script > 
+  function  validatePassword(){
+	  var password = document.getElementById("password").value;
+	   // error1.innerHTML="Give Password";
+ 
+	    if( password==null || password==""){
+	        alert("enter Password");
+	        return false
+	    }
+
+	    else if(password.length<5 || password.length>10){
+	        alert("Password has to be 5 to 10 chars");
+	    }
+
+	} -->
+  
+   <!-- function validate(){
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		if(username == ""){
+		    alert("Please enter a User Name")
+		    return false
+		}
+		if(password == ""){
+		    alert("Please enter a Password and it must be 6 characters long")
+		    return false
+		}
+		} 
+		 -->
+		<!-- </script>  --> 
 </head>
 <body>
 	<h2 style="color: Violet;">Registration Details</h2>
 
 	<form:form id="regForm" modelAttribute="user" action="registerProcess"
-		method="POST" onSubmit="function validate()">
+		method="post" onsubmit=" return validate()">
 
 		<table>
 
 			<tr>
 				<td><form:label path="username">User Name</form:label> <span
 					style="color: red">*</span></td>
-				<td><form:input path="username"  plaseholder = "Enter User Name" name="username" id="username" /></td>
+				<td><form:input path="username" name="username" id="username" /></td>
 			</tr>
 			<tr>
 				<td><form:label path="password">Password</form:label> <span
@@ -61,7 +94,12 @@ body {
 
 			<tr>
 				<td></td>
-				<td><form:button id="register" name="register">Register</form:button></td>
+				
+				<!-- <input type="submit" value="Submit" /> -->
+				
+				  <td><form:button id="register" name="register">Register</form:button></td>  
+				
+
 			</tr>
 			<tr></tr>
 
