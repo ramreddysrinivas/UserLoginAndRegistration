@@ -15,7 +15,7 @@
 </head> 
 
 <body>
-<h2>User Details</h2>
+<h2>User Details</h2>  
 <table>
 
 			<tr><td>User Name</td><td>${user.username} </td></tr>
